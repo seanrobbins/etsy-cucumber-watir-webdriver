@@ -1,0 +1,4 @@
+bin/*
+- 
+features/**/*.feature
+LICENSE.txt

@@ -4,17 +4,12 @@ Given /^I am on Etsy.com$/ do
 end
 
 When /^I want to browse through a treasury gallery$/ do
-  When "I want to buy something from etsy.com"
-  When "I want to browse the treasury"
-  When "I choose the first treasury gallery"
-end
-
-When /^I want to buy something from etsy.com$/ do
-  @buyPage = @homepage.goToBuySection
+  step "I want to browse the treasury"
+  step "I choose the first treasury gallery"
 end
 
 When /^I want to browse the treasury$/ do
-  @treasury_page = @buyPage.selectTreasury
+  @treasury_page = @homepage.selectTreasury
 end
 
 When /^I choose the first treasury gallery$/ do

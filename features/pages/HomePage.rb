@@ -4,11 +4,11 @@ class HomePage < PageObject
     @browser.goto "http://etsy.com"
   end
 
-  def goToBuySection
-    @browser.link(:text, "Buy").click
+  def selectTreasury
+    @browser.span(:text, "Treasury").click
 	
-	buyPage = BuyPage.new(@browser)
-	return buyPage
+    treasuryPage = TreasuryPage.new(@browser)
+    return treasuryPage
   end
   
 end
